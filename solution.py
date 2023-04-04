@@ -14,6 +14,6 @@ def solution(p: float, x: np.array) -> tuple:
     n = len(x)
     mean_x = np.mean(x)
     std_x = np.std(x, ddof=1)
-    t_value = t.ppf(1 - alpha / 2, n - 1)
-    conf_int = t_value * std_x / np.sqrt(n)
+    z_value = norm.ppf(1 - alpha / 2)
+    conf_int = z_value * std_x / np.sqrt(n)
     return (mean_x - conf_int, mean_x + conf_int)
