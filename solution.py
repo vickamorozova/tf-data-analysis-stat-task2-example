@@ -11,5 +11,5 @@ def solution(p: float, x: np.array) -> tuple:
     n = len(x) 
     left = (-min(-x) - 1 / 2) / (44**2 / 2) 
     right = (-np.log(alpha) / n -min(-x) - 1 / 2) / (44**2 / 2) 
-    return left, \ 
+    return left,
            right
